@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  laladb:
+    image: mysql:5.7.22
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: test
+      MYSQL_PASSWORD: test
+      MYSQL_DATABASE: test
+    ports:
+      - '33060:3306'
+    volumes:
+      - laladbvol:/var/lib/mysql
+
+volumes:
+  laladbvol:
