@@ -31,3 +31,19 @@ Crafting application...
 
 - http://www.go-next.co.jp/blog/web/php/28556/
 - https://laraweb.net/
+
+### このリポジトリをクローンしてきた場合
+```
+<(╹ヮ╹)> (master)anzu@anzuAir ~/develop/lalala/lalala $ mv .env.example  .env
+<(╹ヮ╹)> (master)anzu@anzuAir ~/develop/lalala/lalala $ vi .env
+db passなど書き換える
+<(╹ヮ╹)> (master)anzu@anzuAir ~/develop/lalala/lalala $ php artisan key:generate
+
+Warning: require(/Users/anzu/develop/lalala/lalala/vendor/autoload.php): failed to open stream: No such file or directory in /Users/anzu/develop/lalala/lalala/artisan on line 18
+
+Fatal error: require(): Failed opening required '/Users/anzu/develop/lalala/lalala/vendor/autoload.php' (include_path='.:') in /Users/anzu/develop/lalala/lalala/artisan on line 18
+<(╹ヮ╹)> (master)anzu@anzuAir ~/develop/lalala/lalala $ ls vendor/
+<(╹ヮ╹)> (master)anzu@anzuAir ~/develop/lalala/lalala $ composer install
+```
+
+``composer install`` これ必要
